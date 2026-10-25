@@ -1,3 +1,431 @@
-.eventIcon img{
-    width: 7rem;
+/* Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --color-yellow: #f2a71b;
+  --color-yellow-dark: #d97a07;
+  --color-red: #bf4904;
+  --color-red-dark: #8a2f1d;
+  --color-blue: #50a0bf;
+  --color-blue-dark: #3c7da6;
+}
+
+h1 {
+  font-family: "Boldonse", system-ui;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 4rem;
+}
+
+h2 {
+  font-family: "Asap Condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 3rem;
+}
+
+h3 {
+  font-family: "Asap Condensed", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 2.25rem;
+}
+
+h4 {
+  font-family: "Asta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.5rem;
+}
+
+p {
+  font-family: "Asta Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 1rem;
+}
+
+button {
+  font-family: "Asap Condensed", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 1.5rem;
+  padding: 0.5rem 0.75rem;
+  color: white;
+  border: none;
+  border-radius: 0.25rem;
+  cursor: pointer;
+}
+
+.yellowButton {
+  background-color: var(--color-yellow-dark);
+}
+
+.blueButton {
+  background-color: var(--color-blue);
+}
+
+.yellowButton:hover {
+  background-color: var(--color-yellow);
+}
+
+.blueButton:hover {
+  background-color: var(--color-blue-dark);
+}
+
+.yellowButton:active {
+  background-color: white;
+  color: var(--color-yellow-dark);
+}
+
+.blueButton:active {
+  background-color: white;
+  color: var(--color-blue);
+}
+
+section {
+  padding: 5rem;
+}
+
+nav {
+  background-color: var(--color-blue);
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: white;
+}
+
+nav img {
+  width: 80px;
+  height: auto;
+}
+
+ul {
+  list-style-type: none;
+  display: flex;
+  gap: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit
+}
+
+.redBG {
+  background-color: var(--color-red);
+  color: white;
+}
+
+.yellowBG {
+  background-color: var(--color-yellow);
+}
+
+.blueBG {
+  background-color: var(--color-blue-dark);
+  color: white;
+}
+
+footer {
+  background-color: var(--color-red-dark);
+  color: white;
+  padding: 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.specialCard {
+  background-color: var(--color-yellow-dark);
+  color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.specialCard img {
+  width: 100%;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.specialHeader {
+  display: flex;
+  justify-content: space-between;
+}
+
+.eventTypes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
+}
+
+.eventIcon {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.eventIcon img {
+  width: 50%;
+  height: auto;
+  margin-bottom: 0.5rem;
+}
+
+.locationHighlights {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.locationCard {
+  background-color: var(--color-red-dark);
+  color: white;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.reviews{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.reviewCard {
+  background-color: var(--color-red-dark);
+  color: white;
+  padding: 1rem;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+#locations button {
+  margin-bottom: 4rem;
+}
+
+.footerNav {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.footerNav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contactInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contactInfo p {
+  text-decoration: underline;
+}
+
+.socialMedia {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.socialMediaIcons {
+  display: flex;
+  flex-direction:row;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.socialMediaIcons img {
+  width: 40px;
+  height: auto;
+}
+
+.footerLogo {
+  display: flex;
+  justify-content: center;
+}
+
+.footerLogo img {
+  width: 80px;
+  height: auto;
+}
+
+#menuNav {
+  background-color: var(--color-blue);
+  color: white;
+  padding: 2rem 5rem;
+}
+
+.menuNavList {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  overflow-x: hidden;
+  text-wrap: nowrap;
+}
+
+.mymCardHeader {
+  display: flex;
+  flex-direction:row;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+  gap: 1rem;
+  height: 5rem;
+}
+
+.mymCardHeader hr{
+  border: none;
+  width: 100%;
+  color: var(--color-blue-dark);
+  background-color: var(--color-blue-dark);
+  height: 0.3rem;
+}
+
+.mymCard ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.mymCard h3{
+  color: var(--color-blue-dark);
+}
+
+.extraList {
+  display: flex;
+  justify-content: space-between;
+}
+
+.addOnHeader {
+  display: flex;
+  flex-direction:row;
+  align-items: flex-end;
+  margin-bottom: 1rem;
+  gap: 1rem;
+  height: 5rem;
+}
+
+.addOnHeader hr{
+  border: none;
+  width: 100%;
+  color: white;
+  background-color: white;
+  height: 0.3rem;
+}
+
+.addOnOptions {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.addOnCard ul {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.bannerIcon img {
+  width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+  padding-top: 2rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+}
+
+form input, form textarea {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.25rem;
+}
+
+form button {
+  align-self: flex-end
+}
+
+.contactIMGs {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+
+.contactIMGs img {
+  width: 100%;
+  height: auto;
+}
+
+.listCardDate {
+  text-align: center;
+  background-color: var(--color-red);
+  color: white;
+}
+
+.listCard {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: 0.5rem;
+  gap: 1rem;
+}
+
+.locationList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+#monthlyEvents {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  align-items: center;
+}
+
+#monthlyEvents h3 {
+  color: var(--color-red);
 }

@@ -11,12 +11,15 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Asta+Sans:wght@300..800&family=Boldonse&display=swap" rel="stylesheet">
     </head>
     <body>
         <nav>
             <a href="index.html"><img src="images/logo.png" alt="MeltMobile Logo"></a>
             <ul>
-                <li><a href="#"><h4>Menu</h4></a></li>
+                <li><a href="menu.html"><h4>Menu</h4></a></li>
                 <li><a href="locations.html"><h4>Locations</h4></a></li>
                 <li><a href="contact.html"><h4>Contact</h4></a></li>
             </ul>
@@ -27,7 +30,7 @@
             <a href="locations.html"><button class="yellowButton">CHECK OUR AVAILABILITY</button></a>
         </header>
         <main>
-            <section id="contactSection">
+            <section id="contactSection" class="blueBG">
                 <div class="sectionHeader">
                     <h2>BOOK US FOR YOUR NEXT EVENT</h2>
                     <p>Any type of event, from weddings, to office parties, to church fundraisers, we would be happy to cater and serve your gatherings. Get in contact with us below to schedule our services.</p>
@@ -50,7 +53,7 @@
                 </div>
                 
 
-                <div class="sectionText">
+                <div class="contactInfo">
                     <h3>CONTACT INFORMATION</h3>
                     <h4>Phone</h4>
                     <p>(800) 555-6358</p>
@@ -84,13 +87,15 @@
                         <h4>Graduations</h4>
                     </div>
                 </div>
-                <img src="images/foodPackaging.jpg" alt="MeltMobile Food Packaging"/>
-                <img src="images/truckMockup.jpg" alt="MeltMobile Truck"/>
-                <img src="images/peoplePhoto.jpg" alt="People enjoying MeltMobile together"/>
+                <div class="contactIMGs">
+                    <img src="images/foodPackaging.jpg" alt="MeltMobile Food Packaging"/>
+                    <img src="images/truckMockup.jpg" alt="MeltMobile Truck"/>
+                    <img src="images/peoplePhoto.jpg" alt="People enjoying MeltMobile together"/>
+                </div>
             </section>
 
 
-            <section id="locations">
+            <section id="locations" class="redBG">
                 <h3>WHERE WE'LL BE</h3>
                 <div class="locationHighlights">
                     <div class="locationCard">
@@ -102,7 +107,7 @@
                         <p>890 Easton Drive St, Easton, PA | 11AM - 9PM</p>
                     </div>
                 </div>
-                <a href="#"><button class="yellowButton">SEE WHERE WE'LL BE</button></a>
+                <a href="locations.html"><button class="yellowButton">SEE WHERE WE'LL BE</button></a>
                 <h3>SEE REVIEWS</h3>
                 <div class="reviews">
                     <div class="reviewCard">
@@ -118,29 +123,35 @@
 
 
 
-            <footer>
-                <h3>USEFUL LINKS</h3>
-                <ul>
-                    <li><a href="#"><h4>Home</h4></a></li>
-                    <li><a href="#"><h4>Menu</h4></a></li>
-                    <li><a href="#"><h4>Locations</h4></a></li>
-                    <li><a href="#"><h4>Contact</h4></a></li>
-                </ul>
-                <h3>CONTACT US</h3>
+           <footer>
+                <div class="footerNav">
+                    <h3>USEFUL LINKS</h3>
+                    <ul>
+                        <li><a href="index.html"><h4>Home</h4></a></li>
+                        <li><a href="menu.html"><h4>Menu</h4></a></li>
+                        <li><a href="locations.html"><h4>Locations</h4></a></li>
+                        <li><a href="contact.html"><h4>Contact</h4></a></li>
+                    </ul>
+                </div>
                 <div class="contactInfo">
+                    <h3>CONTACT US</h3>
                     <h4>Phone</h4>
                     <p>(800) 555-6358</p>
                     <h4>Email</h4>
                     <p>contact@meltmobile.com</p>
                 </div>
-                <h3>FOLLOW US</h3>
                 <div class="socialMedia">
-                    <a href="#"><img src="images/facebookIcon.png" alt="Facebook Icon"></a>
-                    <a href="#"><img src="images/instagramIcon.png" alt="Instagram Icon"></a>
-                    <a href="#"><img src="images/tiktokIcon.png" alt="TikTok Icon"></a>
-                    <a href="#"><img src="images/bskyIcon.png" alt="Bluesky Icon"></a>
+                    <h3>FOLLOW US</h3>
+                    <div class="socialMediaIcons">
+                        <a href="#"><img src="images/facebookIcon.png" alt="Facebook Icon"></a>
+                        <a href="#"><img src="images/instagramIcon.png" alt="Instagram Icon"></a>
+                        <a href="#"><img src="images/tiktokIcon.png" alt="TikTok Icon"></a>
+                        <a href="#"><img src="images/bskyIcon.png" alt="Bluesky Icon"></a>
+                    </div>
                 </div>
-                <a href="#"><img src="images/icon.png" alt="Melt Mobile Icon"></a>
+                <div class="footerLogo">
+                     <a href="index.html"><img src="images/icon.png" alt="Melt Mobile Icon"></a>
+                </div>
             </footer>
         </main>
         <script src="" async defer></script>
