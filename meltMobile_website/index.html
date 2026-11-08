@@ -12,33 +12,74 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="styles.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Asta+Sans:wght@300..800&family=Boldonse&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Asap+Condensed:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Asta+Sans:wght@300..800&family=Boldonse&display=swap" rel="stylesheet">
+        <script src="https://kit.fontawesome.com/020c3bd52c.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <nav>
-            <a href="index.html"><img src="images/logo.png" alt="MeltMobile Logo"></a>
-            <ul>
-                <li><a href="menu.html"><h4>Menu</h4></a></li>
-                <li><a href="locations.html"><h4>Locations</h4></a></li>
-                <li><a href="contact.html"><h4>Contact</h4></a></li>
+        <nav class="navbar">
+            <a href="index.html" class="logo"><img src="images/logo.png" alt="MeltMobile Logo"></a>
+
+            <button
+                class="menu-toggle"
+                onclick="toggleMenu()"
+                aria-label="Toggle menu"
+                aria-expanded="false"
+            >
+                <!-- Hamburger icon -->
+                <svg
+                    class="icon icon-menu"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24px"
+                    width="24px"
+                    fill="#ffffff"
+                    viewBox="0 -960 960 960"
+                    aria-hidden="true"
+                    >
+                    <path
+                        d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"
+                    />
+                </svg>
+
+                <!-- Close icon -->
+                <svg
+                    class="icon icon-close"
+                    xmlns="http://www.w3.org/2000/svg"
+                    height="24px"
+                    width="24px"
+                    fill="#ffffff"
+                    viewBox="0 -960 960 960"
+                    aria-hidden="true"
+                    >
+                    <path
+                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                    />
+                </svg>
+            </button>
+
+            <ul class="nav-links">
+                <li><a href="menu.html"><h4>MENU</h4></a></li>
+                <li><a href="locations.html"><h4>LOCATIONS</h4></a></li>
+                <li><a href="contact.html"><h4>CONTACT</h4></a></li>
             </ul>
         </nav>
-        <header>
-            <h1>YOUR MELT YOUR WAY</h1>
-            <h2>HOME OF THE $6 MAKE-YOUR-MELT</h2>
-            <a href="locations.html"><button class="yellowButton">SEE WHERE WE'LL BE</button></a>
+        <header class="homeHero">        
+            <div class="heroContent">
+                <h1>YOUR MELT YOUR WAY</h1>
+                <h2>HOME OF THE $6 MAKE-YOUR-MELT</h2>
+                <a href="locations.html"><button class="yellowButton">SEE WHERE WE'LL BE</button></a>
+            </div>   
         </header>
         <main>
             <section id="specials" class="yellowBG">
-                <h2>OUR SELECTION</h2>
+                <h2 class="sectionHeader">OUR SELECTION</h2>
                 <div class="specials">
                     <div class="specialCard">
                         <img src="images/bmelt.png" alt="B-Mel-T Sandwich">
                         <div class="specialInfo">
                             <div class="specialHeader">
                                 <h3>B-MEL-T</h3>
-                                <h3>$6</h3>
+                                <h4>$6</h4>
                             </div>
                             <p>Bacon, lettuce, tomato and cheddar, served on your choice of bread.</p>
                         </div>
@@ -48,7 +89,7 @@
                         <div class="specialInfo">
                             <div class="specialHeader">
                                 <h3>CUBANO</h3>
-                                <h3>$7</h3>
+                                <h4>$7</h4>
                             </div>
                             <p>Ham, shredded pork, swiss, pickles and mustard on cuban bread, pressed and grilled.</p>
                         </div>
@@ -58,7 +99,7 @@
                         <div class="specialInfo">
                             <div class="specialHeader">
                                 <h3>CLASSIC CHEESE</h3>
-                                <h3>$3</h3>
+                                <h4>$3</h4>
                             </div>
                             <p>American cheese melted between white bread, served with tomato soup.</p>
                         </div>
@@ -92,36 +133,46 @@
                         <img src="images/graduationIcon.png" alt="Graduations Icon">
                         <h4>Graduations</h4>
                     </div>
-                    <a href="contact.html"><button class="blueButton">TELL US YOUR PLANS</button></a>
+                    
                 </div>
+                <a href="contact.html"><button class="blueButton">TELL US YOUR PLANS</button></a>
                 
             </section>
             <section id="locations" class="redBG">
-                <h3>WHERE WE'LL BE</h3>
-                <div class="locationHighlights">
-                    <div class="locationCard">
-                        <h4>Oct. 9 | Food Truck Friday</h4>
-                        <p>8080 Emmaus Street Dr, Emmaus, PA | 4PM - 10PM</p>
+                <div class="locationReview">
+                    <div class="locationCardSet">
+                        <h3>WHERE WE'LL BE</h3>
+                        <div class="locationHighlights">
+                            <div class="locationCard">
+                                <h4>Oct. 9 | Food Truck Friday</h4>
+                                <p>8080 Emmaus Street Dr, Emmaus, PA | 4PM - 10PM</p>
+                            </div>
+                            <div class="locationCard">
+                                <h4>Oct. 10 | Easton Community Fair</h4>
+                                <p>890 Easton Drive St, Easton, PA | 11AM - 9PM</p>
+                            </div>
+                        </div>
+                        <a href="locations.html"><button class="yellowButton">SEE WHERE WE'LL BE</button></a>
                     </div>
-                    <div class="locationCard">
-                        <h4>Oct. 10 | Easton Community Fair</h4>
-                        <p>890 Easton Drive St, Easton, PA | 11AM - 9PM</p>
-                    </div>
-                </div>
-                <a href="locations.html"><button class="yellowButton">SEE WHERE WE'LL BE</button></a>
-                <h3>SEE REVIEWS</h3>
-                <div class="reviews">
-                    <div class="reviewCard">
-                        <h4>Ashley H.</h4>
-                        <p>Mmmmm taste good!</p>
-                    </div>
-                    <div class="reviewCard">
-                        <h4>John D.</h4>
-                        <p>Great service and delicious food!</p>
+                    <div class="reviewCardSet">
+                        <h3>SEE REVIEWS</h3>
+                        <div class="reviews">
+                            <div class="reviewCard">
+                                <h4>Ashley H.</h4>
+                                <p>Mmmmm taste good!</p>
+                            </div>
+                            <div class="reviewCard">
+                                <h4>John D.</h4>
+                                <p>Great service and delicious food!</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
-            <footer>
+
+
+
+           <footer>
                 <div class="footerNav">
                     <h3>USEFUL LINKS</h3>
                     <ul>
@@ -133,18 +184,23 @@
                 </div>
                 <div class="contactInfo">
                     <h3>CONTACT US</h3>
-                    <h4>Phone</h4>
-                    <p>(800) 555-6358</p>
-                    <h4>Email</h4>
-                    <p>contact@meltmobile.com</p>
+                    <div class="footerContact">
+                        <div class="phone">
+                            <h4>Phone</h4>
+                            <p>(800) 555-6358</p>
+                        </div>
+                        <div class="email">
+                            <h4>Email</h4>
+                            <p>contact@meltmobile.com</p>
+                        </div>
+                    </div>
                 </div>
                 <div class="socialMedia">
                     <h3>FOLLOW US</h3>
                     <div class="socialMediaIcons">
-                        <a href="#"><img src="images/facebookIcon.png" alt="Facebook Icon"></a>
-                        <a href="#"><img src="images/instagramIcon.png" alt="Instagram Icon"></a>
-                        <a href="#"><img src="images/tiktokIcon.png" alt="TikTok Icon"></a>
-                        <a href="#"><img src="images/bskyIcon.png" alt="Bluesky Icon"></a>
+                        <i class="fa-brands fa-square-facebook"></i>
+                        <i class="fa-brands fa-square-instagram"></i>
+                        <i class="fa-brands fa-square-bluesky"></i>
                     </div>
                 </div>
                 <div class="footerLogo">
@@ -153,5 +209,19 @@
             </footer>
         </main>
         <script src="" async defer></script>
+        <script>
+            function toggleMenu() {
+                const nav = document.querySelector(".nav-links");
+                const button = document.querySelector(".menu-toggle");
+
+                nav.classList.toggle("open");
+                button.classList.toggle("open");
+
+                button.setAttribute(
+                    "aria-expanded",
+                    button.classList.contains("open")
+                );
+            }
+        </script>
     </body>
 </html>

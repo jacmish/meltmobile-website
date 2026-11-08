@@ -19,6 +19,7 @@ h1 {
   font-weight: 400;
   font-style: normal;
   font-size: 4rem;
+  line-height: 1.5;
 }
 
 h2 {
@@ -26,6 +27,8 @@ h2 {
   font-weight: 700;
   font-style: normal;
   font-size: 3rem;
+  line-height: 0.9;
+  padding-bottom: 1rem;
 }
 
 h3 {
@@ -33,6 +36,7 @@ h3 {
   font-weight: 500;
   font-style: normal;
   font-size: 2.25rem;
+  letter-spacing: 1px;
 }
 
 h4 {
@@ -107,6 +111,34 @@ nav img {
   height: auto;
 }
 
+.nav-links a:hover {
+  color: var(--color-yellow);
+}
+
+/* Hide the menu button on desktop */
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  z-index: 1001;
+}
+
+/* Hide the X icon initially */
+.icon-close {
+  display: none;
+}
+
+/* Show the X when the button is open */
+.menu-toggle.open .icon-menu {
+  display: none;
+}
+
+.menu-toggle.open .icon-close {
+  display: inline;
+}
+
 ul {
   list-style-type: none;
   display: flex;
@@ -118,6 +150,46 @@ a {
   color: inherit
 }
 
+header {
+  color: var(--color-red);
+  padding: 5rem;
+}
+
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 60%;
+}
+
+.homeHero {
+  background-image: url("images/homeHero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.locationsHero {
+  background-image: url("images/locationsHero.png");
+  background-size: auto 100%;
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+.menuHero {
+  background-image: url("images/menuHeroCropped.png");
+  background-size: auto 100%;
+  background-position: right center;
+  background-repeat: no-repeat;
+}
+
+.contactHero {
+  background-image: url("images/contactHero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
 .redBG {
   background-color: var(--color-red);
   color: white;
@@ -125,6 +197,7 @@ a {
 
 .yellowBG {
   background-color: var(--color-yellow);
+  color: white;
 }
 
 .blueBG {
@@ -139,6 +212,7 @@ footer {
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  text-align: center;
 }
 
 .specialCard {
@@ -162,6 +236,17 @@ footer {
 .specialHeader {
   display: flex;
   justify-content: space-between;
+  line-height: 0.9;
+  padding-bottom: 0.75rem;
+  align-items: center;
+}
+
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 1rem;
 }
 
 .eventTypes {
@@ -185,6 +270,16 @@ footer {
   width: 50%;
   height: auto;
   margin-bottom: 0.5rem;
+}
+
+.locationCardSet {
+  display: flex;
+  flex-direction: column;
+}
+
+.reviewCardSet {
+  display: flex;
+  flex-direction: column;
 }
 
 .locationHighlights {
@@ -234,7 +329,6 @@ footer {
 .footerNav {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   gap: 1rem;
 }
 
@@ -252,24 +346,13 @@ footer {
 
 .contactInfo p {
   text-decoration: underline;
+  margin-top: -0.75rem;
 }
 
 .socialMedia {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-}
-
-.socialMediaIcons {
-  display: flex;
-  flex-direction:row;
-  justify-content: space-between;
-  gap: 1rem;
-}
-
-.socialMediaIcons img {
-  width: 40px;
-  height: auto;
 }
 
 .footerLogo {
@@ -290,11 +373,11 @@ footer {
 
 .menuNavList {
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
   align-items: center;
   gap: 1rem;
-  overflow-x: hidden;
-  text-wrap: nowrap;
+  text-wrap: wrap;
 }
 
 .mymCardHeader {
@@ -353,6 +436,10 @@ footer {
   gap: 1rem;
 }
 
+.addOnCard h4 {
+  padding-bottom: 0.5rem;
+}
+
 .addOnCard ul {
   display: flex;
   flex-direction: column;
@@ -385,6 +472,28 @@ form button {
   align-self: flex-end
 }
 
+.formColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.sectionContact {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.sectionContact .phone, .sectionContact .email {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contactBannerIcon {
+  display: none;
+}
+
 .contactIMGs {
   display: flex;
   flex-direction: column;
@@ -402,6 +511,7 @@ form button {
   text-align: center;
   background-color: var(--color-red);
   color: white;
+  padding: 0.25rem;
 }
 
 .listCard {
@@ -429,3 +539,233 @@ form button {
 #monthlyEvents h3 {
   color: var(--color-red);
 }
+
+.socialMediaIcons {
+  display: flex;
+  flex-direction:row;
+  justify-content: center;
+  gap: 1rem;
+  font-size: 1.5rem;
+}
+
+
+.footerContact h4{
+  padding-bottom: 1rem;
+}
+
+.phone p{
+  padding-bottom: 1rem;
+}
+
+
+@media (min-width: 980px) {
+  .specials {
+    display: flex;  
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-evenly;
+    width: 100%;
+  }
+
+  .specialCard {
+    width: 30%;
+  }
+
+  .eventTypes {
+    flex-direction: row;
+  }
+
+  .locationReview {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    justify-content: space-around;
+  }
+
+  .locationReview .locationCardSet, .reviewCardSet{
+    width: 40%;
+  }
+
+  .sectionHeader {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-bottom: 1rem;
+  }
+  #weeklyEvents .locationHighlights {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: space-around;
+  }
+
+  #weeklyEvents .locationCard {
+    width: 40%;
+  }
+
+    .menuNavList {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
+  .mymList {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .mymCard {
+    width: 30%;
+  }
+
+  #addOns {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+
+  form {
+    flex-direction: row;
+  }
+
+  .formColumn {
+    width: 50%;
+  }
+
+  .contactBannerIcon {
+    display: flex;
+  }
+
+  .contactBannerIcon img {
+    width: 100%;
+    height: auto;
+  }
+
+  .contactBanner {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+  }
+
+  .contactBanner .contactInfo {
+    width: 50%;
+  }
+
+  
+  .menuHero {
+   background-image: url("images/menuHero.png");
+   background-size: contain;
+   background-position: right center;
+   background-repeat: no-repeat;
+  }
+
+}
+
+@media (min-width: 1362px) {
+  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5rem 10rem;
+  }
+
+  .footerNav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: flex-start;
+  }
+
+  .footerContact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap:1rem;
+  }
+
+    .locationList {
+    display: flex; 
+    flex-direction: row; 
+    justify-content: space-between;
+  }
+
+  .contactIMGs {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .contactIMGs img {
+    width: 30%;
+  }
+
+
+
+}
+
+/* Mobile and tablet navigation */
+@media (max-width: 980px) {
+  /* Show the hamburger button */
+  .menu-toggle {
+    display: block;
+  }
+
+  /* Position the links off-screen */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -250px;
+    height: 100vh;
+    width: 15rem;
+    background-color: var(--color-blue);
+    backdrop-filter: blur(2px);
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 3rem;
+    transition: right 0.3s ease;
+    box-shadow: -10px 0 10px rgba(0, 0, 0, 0.2);
+  }
+
+  /* Slide the menu into view */
+  .nav-links.open {
+    right: 0;
+  }
+
+  /* Make each link fill the menu width */
+  .nav-links li {
+    width: 100%;
+  }
+
+  .nav-links a {
+    display: block;
+    width: 100%;
+    padding: 1rem 2rem;
+  }
+
+}
+
+/*  footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footerNav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  .footerContact {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+    */
+    
